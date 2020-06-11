@@ -14,8 +14,8 @@ import UIKit
  */
 open class KeyboardButtonView: UIButton, KeyboardButton {
     
-    public private(set) var action: KeyboardAction = .none
-    public private(set) var secondaryAction: KeyboardAction?
+    public var action: KeyboardAction = .none
+    public var secondaryAction: KeyboardAction?
     public private(set) var keyboardAppearance: UIKeyboardAppearance = .default
     
     public var widthConstraint: NSLayoutConstraint?
