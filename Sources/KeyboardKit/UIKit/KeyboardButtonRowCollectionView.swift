@@ -123,12 +123,9 @@ open class KeyboardButtonRowCollectionView: KeyboardCollectionView, PagedKeyboar
     
     public let id: String
     public let configuration: Configuration
+    public private(set) var rows: KeyboardActionRows
     
-    // This is public, and `actions` is open, so that you may choose to create
-    // rows from actions in a different way than this class does.
-    public var rows: KeyboardActionRows
-    
-    open override var actions: [KeyboardAction] {
+    public override var actions: [KeyboardAction] {
         didSet { rows = actions.rows(for: configuration) }
     }
     
